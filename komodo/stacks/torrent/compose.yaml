@@ -12,6 +12,7 @@ services:
       - "6881:6881/tcp" # qbitorrent
       - "6881:6881/udp" # qbitorrent
       - "8085:8085/tcp" # qbitorrent
+      - "8191:8191/tcp" # flaresolverr
       - "9696:9696/tcp" # prowlarr
       - "7878:7878/tcp" # radarr
     volumes:
@@ -44,6 +45,18 @@ services:
       - TZ=${TZ}
       - WEBUI_PORT=8085
       - TORRENTING_PORT=6881
+
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    restart: unless-stopped
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
+    env_file:
+      - .env
+    environment:
+      - TZ=${TZ}
 
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
