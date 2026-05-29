@@ -1,9 +1,10 @@
 { ... }:
 let
   nasHost = "10.10.10.10";
+  mntPath = "/mnt/tank";
 in
 {
-  fileSystems."/mnt/tank/data/torrent" = {
+  fileSystems."${mntPath}/data/torrent" = {
     device = "${nasHost}:/tank/data/torrent";
     fsType = "nfs";
     options = [
@@ -18,7 +19,7 @@ in
     ];
   };
 
-  fileSystems."/mnt/tank/media/movies" = {
+  fileSystems."${mntPath}/media/movies" = {
     device = "${nasHost}:/tank/media/movies";
     fsType = "nfs";
     options = [
@@ -33,7 +34,7 @@ in
     ];
   };
 
-  fileSystems."/mnt/tank/media/tv" = {
+  fileSystems."${mntPath}/media/tv" = {
     device = "${nasHost}:/tank/media/tv";
     fsType = "nfs";
     options = [
