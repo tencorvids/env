@@ -1,9 +1,15 @@
 {
   inputs,
+  lib,
   vars,
   ...
 }:
 {
+  environment.etc."komodo/stacks" = {
+    source = "/home/rew/env/stacks";
+    mode = "symlink";
+  };
+
   home-manager.users.${vars.username} = {
     imports = with inputs.self.modules.homeManager; [
       base
