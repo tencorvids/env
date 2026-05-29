@@ -10,9 +10,13 @@
       inherit inputs;
       vars = self.vars.user;
     };
-    modules = [
-      inputs.self.modules.nixos.base
-      inputs.home-manager.nixosModules.default
+    modules = with inputs.self.modules.nixos; [
+      base
+      grub_boot
+      kernel
+      qemu_guest
+      virt
+      home-manager.nixosModules.default
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
