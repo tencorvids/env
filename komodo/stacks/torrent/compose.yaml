@@ -36,7 +36,7 @@ services:
       - gluetun
     volumes:
       - ${TORRENT_QBITTORRENT_CONFIG_PATH}:/config
-      - ${TORRENT_DATA_PATH}:/data
+      - ${TORRENT_QBITTORRENT_DATA_PATH}:/data
     env_file:
       - .env
     environment:
@@ -83,7 +83,8 @@ services:
       - gluetun
     volumes:
       - ${TORRENT_RADARR_CONFIG_PATH}:/config
-      - ${TORRENT_DATA_PATH}:/data
+      - ${TORRENT_QBITTORRENT_DATA_PATH}:/downloads
+      - ${TORRENT_RADARR_MOVIES_PATH}:/movies
     env_file:
       - .env
     environment:
