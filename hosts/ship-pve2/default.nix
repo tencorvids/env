@@ -16,7 +16,7 @@
       kernel
       qemu_guest
       virt
-      home-manager.nixosModules.default
+      inputs.home-manager.nixosModules.default
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
