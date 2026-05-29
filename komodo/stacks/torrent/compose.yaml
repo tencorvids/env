@@ -128,3 +128,20 @@ services:
       - PGID=${PUID}
       - TZ=${TZ}
       - UMASK=022
+
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    restart: unless-stopped
+    ports:
+      - "8096:8096/tcp"
+    volumes:
+      - ${TORRENT_JELLYFIN_CONFIG_PATH}:/config
+      - ${TORRENT_JELLYFIN_CACHE_PATH}:/cache
+      - ${TORRENT_JELLYFIN_DATA_PATH}:/data
+    env_file:
+      - .env
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
