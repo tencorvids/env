@@ -16,6 +16,7 @@ services:
       - "9696:9696/tcp" # prowlarr
       - "7878:7878/tcp" # radarr
       - "8989:8989/tcp" # sonarr
+      - "6868:6868/tcp" # profilarr
     volumes:
       - ${TORRENT_GLUETUN_CONFIG_PATH}:/gluetun
     env_file:
@@ -110,3 +111,20 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TZ}
+
+  profilarr:
+    image: ghcr.io/dictionarry-hub/profilarr:latest
+    container_name: profilarr
+    restart: unless-stopped
+    network_mode: "service:gluetun" 
+    depends_on:
+      - gluetun
+    volumes:
+      - ${TORRENT_PROFILARR_CONFIG_PATH}:/config
+    env_file:
+      - .env
+    environment:
+      - PUID=${PUID}
+      - PGID=${PUID}
+      - TZ=${TZ}
+      - UMASK=022
