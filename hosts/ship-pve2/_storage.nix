@@ -1,6 +1,6 @@
 { ... }:
 let
-  nasHost = "10.10.10.20";
+  nasHost = "10.10.10.10";
 in
 {
   fileSystems."/mnt/tank/data/torrent" = {
