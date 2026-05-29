@@ -4,8 +4,8 @@ let
   mntPath = "/mnt/tank";
 in
 {
-  fileSystems."${mntPath}/data/torrent" = {
-    device = "${nasHost}:/mnt/tank/data/torrent";
+  fileSystems."${mntPath}/data" = {
+    device = "${nasHost}:/mnt/tank/data";
     fsType = "nfs";
     options = [
       "nfsvers=4.2"
@@ -19,23 +19,8 @@ in
     ];
   };
 
-  fileSystems."${mntPath}/media/movies" = {
-    device = "${nasHost}:/mnt/tank/media/movies";
-    fsType = "nfs";
-    options = [
-      "nfsvers=4.2"
-      "x-systemd.automount"
-      "noauto"
-      "_netdev"
-      "nofail"
-      "hard"
-      "timeo=600"
-      "retrans=2"
-    ];
-  };
-
-  fileSystems."${mntPath}/media/tv" = {
-    device = "${nasHost}:/mnt/tank/media/tv";
+  fileSystems."${mntPath}/media" = {
+    device = "${nasHost}:/mnt/tank/media";
     fsType = "nfs";
     options = [
       "nfsvers=4.2"
