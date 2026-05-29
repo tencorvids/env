@@ -150,6 +150,7 @@ services:
   seerr:
     image: ghcr.io/seerr-team/seerr:latest
     container_name: seerr
+    user: "${PUID}:${PGID}"
     restart: unless-stopped
     network_mode: "service:gluetun"
     depends_on:
@@ -159,6 +160,8 @@ services:
     env_file:
       - .env
     environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
       - TZ=${TZ}
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/settings/public || exit 1
