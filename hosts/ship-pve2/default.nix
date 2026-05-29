@@ -28,6 +28,7 @@
       ./_hardware-configuration.nix
       ./_home.nix
       ./_network.nix
+      ./_storage.nix
     ];
   };
 }
