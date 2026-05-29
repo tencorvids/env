@@ -15,7 +15,7 @@ services:
       - "9696:9696/tcp" # prowlarr
       - "7878:7878/tcp" # radarr
     volumes:
-      - /srv/docker/appdata/gluetun:/gluetun
+      - ${TORRENT_GLUETUN_CONFIG_PATH}:/gluetun
     env_file:
       - .env
     environment:
@@ -34,8 +34,8 @@ services:
     depends_on:
       - gluetun
     volumes:
-      - /srv/docker/appdata/qbittorrent:/config
-      - /srv/docker/data/torrents:/downloads
+      - ${TORRENT_QBITTORRENT_CONFIG_PATH}:/config
+      - ${TORRENT_DOWNLOADS_PATH}:/downloads
     env_file:
       - .env
     environment:
@@ -53,7 +53,7 @@ services:
     depends_on:
       - gluetun
     volumes:
-      - /srv/docker/appdata/prowlarr:/config
+      - ${TORRENT_PROWLARR_CONFIG_PATH}:/config
     env_file:
       - .env
     environment:
@@ -69,9 +69,9 @@ services:
     depends_on:
       - gluetun
     volumes:
-      - /srv/docker/appdata/radarr:/config
-      - /srv/docker/data/media/movies:/movies
-      - /srv/docker/data/torrents:/downloads
+      - ${TORRENT_RADARR_CONFIG_PATH}:/config
+      - ${TORRENT_MOVIES_PATH}:/movies
+      - ${TORRENT_DOWNLOADS_PATH}:/downloads
     env_file:
       - .env
     environment:
