@@ -5,7 +5,7 @@ let
 in
 {
   fileSystems."${mntPath}/data/torrent" = {
-    device = "${nasHost}:/tank/data/torrent";
+    device = "${nasHost}:/mnt/tank/data/torrent";
     fsType = "nfs";
     options = [
       "nfsvers=4.2"
@@ -20,7 +20,7 @@ in
   };
 
   fileSystems."${mntPath}/media/movies" = {
-    device = "${nasHost}:/tank/media/movies";
+    device = "${nasHost}:/mnt/tank/media/movies";
     fsType = "nfs";
     options = [
       "nfsvers=4.2"
@@ -35,7 +35,7 @@ in
   };
 
   fileSystems."${mntPath}/media/tv" = {
-    device = "${nasHost}:/tank/media/tv";
+    device = "${nasHost}:/mnt/tank/media/tv";
     fsType = "nfs";
     options = [
       "nfsvers=4.2"
