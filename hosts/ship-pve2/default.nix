@@ -12,9 +12,9 @@
     modules = [
       inputs.self.modules.nixos.base
       inputs.home-manager.nixosModules.default
-      ./hardware-configuration.nix
-      ./home.nix
-      ./network.nix
+      ./_hardware-configuration.nix
+      ./_home.nix
+      ./_network.nix
     ];
   };
 }
