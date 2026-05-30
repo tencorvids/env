@@ -59,7 +59,7 @@ services:
       - gluetun
     volumes:
       - ${TORRENT_NZBGET_CONFIG_PATH}:/config
-      - ${TORRENT_NZBGET_DATA_PATH}:/data
+      - ${TORRENT_NZBGET_DATA_PATH}:/downloads
     env_file:
       - .env
     environment:
