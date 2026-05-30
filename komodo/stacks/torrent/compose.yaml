@@ -67,6 +67,23 @@ services:
       - WEBUI_PORT=8085
       - TORRENTING_PORT=6881
 
+  nzbget:
+    image: lscr.io/linuxserver/nzbget:latest
+    container_name: nzbget
+    restart: unless-stopped
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
+    volumes:
+      - ${TORRENT_NZBGET_CONFIG_PATH}:/config
+      - ${TORRENT_NZBGET_DATA_PATH}:/data
+    env_file:
+      - .env
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+
   flaresolverr:
     image: ghcr.io/flaresolverr/flaresolverr:latest
     container_name: flaresolverr
