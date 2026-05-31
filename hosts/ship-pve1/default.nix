@@ -4,7 +4,7 @@
   ...
 }:
 {
-  flake.nixosConfigurations.ship_pve2 = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.ship_pve1 = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {
       inherit inputs;
