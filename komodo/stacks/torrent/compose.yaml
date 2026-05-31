@@ -40,7 +40,7 @@ services:
       - gluetun
     volumes:
       - ${TORRENT_QBITTORRENT_CONFIG_PATH}:/config
-      - ${TORRENT_QBITTORRENT_DATA_PATH}:/downloads
+      - ${TORRENT_QBITTORRENT_DATA_PATH}:/torrents
     env_file:
       - .env
     environment:
@@ -59,7 +59,7 @@ services:
       - gluetun
     volumes:
       - ${TORRENT_NZBGET_CONFIG_PATH}:/config
-      - ${TORRENT_NZBGET_DATA_PATH}:/downloads
+      - ${TORRENT_NZBGET_DATA_PATH}:/usenet
     env_file:
       - .env
     environment:
