@@ -13,8 +13,6 @@ services:
     image: ghcr.io/moghtech/komodo-periphery:${COMPOSE_KOMODO_IMAGE_TAG:-2}
     init: true
     restart: unless-stopped
-    depends_on:
-      - core
     env_file: ./.env
     volumes:
       ## Attach the Core / Periphery communication keys
