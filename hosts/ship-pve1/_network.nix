@@ -1,6 +1,6 @@
 { ... }:
 {
-  networking.hostName = "ship-pve2";
+  networking.hostName = "ship-pve1";
   networking.useDHCP = false;
   networking.interfaces.ens18.ipv4.addresses = [
     {
