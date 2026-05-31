@@ -103,7 +103,8 @@ services:
     depends_on:
       - gluetun
     volumes:
-      - ${TORRENT_QBITTORRENT_DATA_PATH}:/downloads
+      - ${TORRENT_QBITTORRENT_DATA_PATH}:/torrent
+      - ${TORRENT_NZBGET_DATA_PATH}:/usenet
       - ${TORRENT_RADARR_CONFIG_PATH}:/config
       - ${TORRENT_RADARR_MOVIES_PATH}:/movies
     env_file:
@@ -121,7 +122,8 @@ services:
     depends_on:
       - gluetun
     volumes:
-      - ${TORRENT_QBITTORRENT_DATA_PATH}:/downloads
+      - ${TORRENT_QBITTORRENT_DATA_PATH}:/torrent
+      - ${TORRENT_NZBGET_DATA_PATH}:/usenet
       - ${TORRENT_SONARR_CONFIG_PATH}:/config
       - ${TORRENT_SONARR_TV_PATH}:/tv
     env_file:
