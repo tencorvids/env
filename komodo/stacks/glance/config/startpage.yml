@@ -12,6 +12,9 @@
           cache: 1m
           title: Core
           sites:
+            - title: Miniflux
+              url: http://miniflux.lab.tencorvids.com
+              icon: sh:miniflux
             - title: Jellyfin
               url: http://jellyfin.lab.tencorvids.com
               icon: sh:jellyfin
@@ -32,15 +35,12 @@
           cache: 1m
           title: Torrent
           sites:
-            - title: Jellyfin
-              url: http://jellyfin.lab.tencorvids.com
-              icon: sh:jellyfin
             - title: qBittorrent 
               url: http://qbittorrent.lab.tencorvids.com
               icon: sh:qbittorrent
-            - title: Immich
-              url: http://immich.lab.tencorvids.com
-              icon: sh:immich
+            - title: NZBGet
+              url: http://nzbget.lab.tencorvids.com
+              icon: sh:nzbget
             - title: Prowlarr
               url: http://prowlarr.lab.tencorvids.com
               icon: sh:prowlarr
@@ -53,24 +53,9 @@
             - title: Profilarr
               url: http://profilarr.lab.tencorvids.com
               icon: sh:profilarr
-            - title: NZBGet
-              url: http://nzbget.lab.tencorvids.com
-              icon: sh:nzbget
             - title: Seerr
               url: http://seerr.lab.tencorvids.com
               icon: sh:seerr
-            - title: Miniflux
-              url: http://miniflux.lab.tencorvids.com
-              icon: sh:miniflux
-            - title: pve1
-              url: https://pve1.lab.tencorvids.com
-              icon: sh:proxmox
-            - title: pve2
-              url: https://pve2.lab.tencorvids.com
-              icon: sh:proxmox
-            - title: pve3
-              url: https://pve3.lab.tencorvids.com
-              icon: sh:proxmox
 
         - type: bookmarks
           groups:
