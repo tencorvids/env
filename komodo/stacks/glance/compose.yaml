@@ -1,0 +1,15 @@
+services:
+  glance:
+    image: glanceapp/glance
+    container_name: glance
+    restart: unless-stopped
+    ports:
+      - "${GLANCE_PORT}:8080"
+    volumes:
+      - ${GLANCE_CONFIG_PATH}:/app/config
+    env_file:
+      - .env
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
