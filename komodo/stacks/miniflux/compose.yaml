@@ -1,0 +1,39 @@
+services:
+  miniflux:
+    image: ${MINIFLUX_IMAGE:-miniflux/miniflux:latest}
+    container_name: miniflux
+    restart: unless-stopped
+    ports:
+      - "${MINIFLUX_PORT}:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgres://${MINIFLUX_DB_USER}:${MINIFLUX_DB_PASSWORD}@db/${MINIFLUX_DB_NAME}?sslmode=disable
+      - RUN_MIGRATIONS=1
+      - CREATE_ADMIN=1
+      - ADMIN_USERNAME=${MINIFLUX_ADMIN_USERNAME}
+      - ADMIN_PASSWORD=${MINIFLUX_ADMIN_PASSWORD}
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+
+  db:
+    image: ${MINIFLUX_DB_IMAGE:-postgres:latest}
+    container_name: miniflux-postgres
+    restart: unless-stopped
+    volumes:
+      - ${MINIFLUX_DB_DATA_PATH}:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${MINIFLUX_DB_USER}
+      - POSTGRES_PASSWORD=${MINIFLUX_DB_PASSWORD}
+      - POSTGRES_DB=${MINIFLUX_DB_NAME}
+      - TZ=${TZ}
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${MINIFLUX_DB_USER}"]
+      interval: 10s
+      start_period: 30s
