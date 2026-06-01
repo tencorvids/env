@@ -1,3 +1,2 @@
 pages:
-  - $include: home.yml
   - $include: startpage.yml
