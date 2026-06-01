@@ -14,13 +14,22 @@
           sites:
             - title: Jellyfin
               url: http://jellyfin.lab.tencorvids.com
-              icon: si:jellyfin
+              icon: sh:jellyfin
             - title: qBittorrent 
               url: http://qbittorrent.lab.tencorvids.com
-              icon: si:qbittorrent
+              icon: sh:qbittorrent
             - title: Immich
               url: http://immich.lab.tencorvids.com
-              icon: si:immich
+              icon: sh:immich
+            - title: Prowlarr
+              url: http://prowlarr.lab.tencorvids.com
+              icon: sh:prowlarr
+            - title: sonarr
+              url: http://sonarr.lab.tencorvids.com
+              icon: sh:sonarr
+            - title: radarr
+              url: http://radarr.lab.tencorvids.com
+              icon: sh:radarr
 
         - type: bookmarks
           groups:
