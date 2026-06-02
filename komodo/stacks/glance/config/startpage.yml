@@ -35,6 +35,7 @@
             - title: NZBGet
               url: http://nzbget.lab.tencorvids.com
               icon: sh:nzbget
+              alt-status-codes: [200, 401]
             - title: Prowlarr
               url: http://prowlarr.lab.tencorvids.com
               icon: sh:prowlarr
