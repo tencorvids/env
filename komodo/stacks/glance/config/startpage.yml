@@ -23,7 +23,7 @@
               icon: sh:immich
             - title: Crafty
               url: http://crafty.lab.tencorvids.com
-              icon: sh:crafty
+              icon: sh:minecraft
 
         - type: monitor
           cache: 1m
