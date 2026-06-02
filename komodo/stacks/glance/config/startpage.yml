@@ -68,6 +68,9 @@
             - title: Komodo
               url: http://komodo.lab.tencorvids.com
               icon: sh:komodo
+            - title: NGINX Proxy Manager
+              url: http://proxy.lab.tencorvids.com
+              icon: sh:nginx
 
 
         - type: bookmarks
