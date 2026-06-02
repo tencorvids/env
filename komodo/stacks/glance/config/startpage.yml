@@ -65,7 +65,7 @@
               url: https://pve3.lab.tencorvids.com
               icon: sh:proxmox
             - title: Komodo
-              url: https://komodo.lab.tencorvids.com
+              url: http://komodo.lab.tencorvids.com
               icon: sh:komodo
 
 
