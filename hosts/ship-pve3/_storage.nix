@@ -18,4 +18,19 @@ in
       "retrans=2"
     ];
   };
+
+  fileSystems."${mntPath}/backups" = {
+    device = "${nasHost}:/mnt/tank/backups";
+    fsType = "nfs";
+    options = [
+      "nfsvers=4.2"
+      "x-systemd.automount"
+      "noauto"
+      "_netdev"
+      "nofail"
+      "hard"
+      "timeo=600"
+      "retrans=2"
+    ];
+  };
 }
