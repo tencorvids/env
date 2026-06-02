@@ -10,7 +10,7 @@
 
         - type: monitor
           cache: 1m
-          title: Core
+          title: Services
           sites:
             - title: Miniflux
               url: http://miniflux.lab.tencorvids.com
@@ -21,15 +21,9 @@
             - title: Immich
               url: http://immich.lab.tencorvids.com
               icon: sh:immich
-            - title: pve1
-              url: https://pve1.lab.tencorvids.com
-              icon: sh:proxmox
-            - title: pve2
-              url: https://pve2.lab.tencorvids.com
-              icon: sh:proxmox
-            - title: pve3
-              url: https://pve3.lab.tencorvids.com
-              icon: sh:proxmox
+            - title: Crafty
+              url: http://crafty.lab.tencorvids.com
+              icon: sh:crafty
 
         - type: monitor
           cache: 1m
@@ -56,6 +50,24 @@
             - title: Seerr
               url: http://seerr.lab.tencorvids.com
               icon: sh:seerr
+
+        - type: monitor
+          cache: 1m
+          title: Core
+          sites:
+            - title: "Proxmox Node 1"
+              url: https://pve1.lab.tencorvids.com
+              icon: sh:proxmox
+            - title: "Proxmox Node 2"
+              url: https://pve2.lab.tencorvids.com
+              icon: sh:proxmox
+            - title: "Proxmox Node 3"
+              url: https://pve3.lab.tencorvids.com
+              icon: sh:proxmox
+            - title: Komodo
+              url: https://komodo.lab.tencorvids.com
+              icon: sh:komodo
+
 
         - type: bookmarks
           groups:
