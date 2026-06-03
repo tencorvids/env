@@ -12,12 +12,15 @@
             - title: Miniflux
               url: http://miniflux.lab.tencorvids.com
               icon: sh:miniflux
-            - title: Jellyfin
-              url: http://jellyfin.lab.tencorvids.com
-              icon: sh:jellyfin
             - title: Immich
               url: http://immich.lab.tencorvids.com
               icon: sh:immich
+            - title: Jellyfin
+              url: http://jellyfin.lab.tencorvids.com
+              icon: sh:jellyfin
+            - title: Seerr
+              url: http://seerr.lab.tencorvids.com
+              icon: sh:seerr
 
         - type: monitor
           cache: 1m
@@ -42,9 +45,6 @@
             - title: Profilarr
               url: http://profilarr.lab.tencorvids.com
               icon: sh:profilarr
-            - title: Seerr
-              url: http://seerr.lab.tencorvids.com
-              icon: sh:seerr
 
         - type: monitor
           cache: 1m
