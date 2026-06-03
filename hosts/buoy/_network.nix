@@ -10,7 +10,7 @@
   ];
   networking.defaultGateway = "10.10.99.1";
   networking.nameservers = [
-    "10.10.10.1"
+    "10.10.99.1"
     "1.1.1.1"
     "8.8.8.8"
   ];
