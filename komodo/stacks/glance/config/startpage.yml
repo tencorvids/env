@@ -21,9 +21,6 @@
             - title: Immich
               url: http://immich.lab.tencorvids.com
               icon: sh:immich
-            - title: Crafty
-              url: http://crafty.lab.tencorvids.com
-              icon: sh:minecraft
 
         - type: monitor
           cache: 1m
@@ -65,13 +62,23 @@
             - title: "Proxmox Node 3"
               url: https://pve3.lab.tencorvids.com
               icon: sh:proxmox
-            - title: Komodo
-              url: http://komodo.lab.tencorvids.com
+            - title: Ship
+              url: http://ship.lab.tencorvids.com
               icon: sh:komodo
             - title: NGINX Proxy Manager
               url: http://proxy.lab.tencorvids.com
               icon: sh:nginx
 
+        - type: monitor
+          cache: 1m
+          title: DMZ
+          sites:
+            - title: Buoy
+              url: http://buoy.lab.tencorvids.com
+              icon: sh:komodo
+            - title: Crafty
+              url: http://crafty.lab.tencorvids.com
+              icon: sh:minecraft
 
         - type: bookmarks
           groups:
