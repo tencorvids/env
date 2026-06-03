@@ -1,2 +1,7 @@
 pages:
   - $include: startpage.yml
+
+theme:
+  background-color: 50 1 6
+  primary-color: 24 97 58
+  negative-color: 209 88 54
