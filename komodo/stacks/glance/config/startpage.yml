@@ -59,6 +59,9 @@
             - title: "Proxmox Node 3"
               url: https://pve3.lab.tencorvids.com
               icon: sh:proxmox
+            - title: Unifi
+              url: https://unifi.ui.com/consoles/6C63F8AC21BB00000000093C55AC0000000009BB92EF00000000685BD4CE:888987432/network/default/dashboard
+              icon: sh:ubiquiti-unifi
             - title: Ship
               url: http://ship.lab.tencorvids.com
               icon: sh:komodo
