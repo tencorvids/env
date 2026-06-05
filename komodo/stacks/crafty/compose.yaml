@@ -9,6 +9,8 @@ services:
       - "${CRAFTY_MC_PORT_1}:25565/udp"
       - "${CRAFTY_MC_PORT_2}:25566/tcp"
       - "${CRAFTY_MC_PORT_2}:25566/udp"
+      - "${VOICE_CHAT_PORT}:25566/tcp"
+      - "${VOICE_CHAT_PORT}:25566/udp"
     volumes:
       - ${CRAFTY_BACKUPS_PATH}:/crafty/backups
       - ${CRAFTY_LOGS_PATH}:/crafty/logs
