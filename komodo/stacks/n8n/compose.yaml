@@ -1,0 +1,23 @@
+services:
+  n8n:
+    image: ${N8N_IMAGE:-docker.n8n.io/n8nio/n8n:latest}
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "${N8N_PORT}:5678"
+    volumes:
+      - ${N8N_DATA_PATH}:/home/node/.n8n
+      - ${N8N_FILES_PATH}:/files
+    env_file:
+      - .env
+    environment:
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_HOST=${N8N_HOST}
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - WEBHOOK_URL=${N8N_WEBHOOK_URL}
+      - GENERIC_TIMEZONE=${TZ}
+      - TZ=${TZ}
+      - PUID=${PUID}
+      - PGID=${PGID}
