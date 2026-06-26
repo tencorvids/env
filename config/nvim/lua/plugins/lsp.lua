@@ -3,7 +3,7 @@ return {
         "nvim-treesitter/nvim-treesitter",
         config = function()
             local filetypes = { "bash", "c", "html", "lua", "luadoc",
-                "vim", "vimdoc", "gdscript", "godot_resource", "gdshader" }
+                "vim", "vimdoc", "gdscript", "godot_resource", "gdshader", "python" }
             require("nvim-treesitter").install(filetypes)
             vim.api.nvim_create_autocmd("FileType", {
                 pattern = filetypes,
@@ -67,6 +67,8 @@ return {
                 },
                 nixd = {},
                 gopls = {},
+                basedpyright = {},
+                ruff = {},
                 gdscript = {},
                 emmet_language_server = {},
                 ts_ls = {},
@@ -106,7 +108,8 @@ return {
             formatters_by_ft = {
                 lua = { "stylua" },
                 nix = { "nixfmt-rfc-style" },
-                go = { "gofmt" }
+                go = { "gofmt" },
+                python = { "ruff_format" },
             },
         },
     },
@@ -141,7 +144,6 @@ return {
                     { name = "nvim_lsp" },
                     { name = "path" },
                     { name = "buffer" },
-                    -- { name = "supermaven" },
                 },
             })
         end,
