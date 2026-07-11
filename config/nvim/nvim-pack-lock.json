@@ -1,0 +1,79 @@
+{
+  "plugins": {
+    "ashen.nvim": {
+      "rev": "bfb04bd50b69d863469b2deb9fb361cf0d945ba7",
+      "src": "https://github.com/ficd0/ashen.nvim",
+      "version": "'main'"
+    },
+    "blink.cmp": {
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": "1.0.0 - 2.0.0"
+    },
+    "conform.nvim": {
+      "rev": "3543d000dafbc41cc7761d860cfdb24e82154f75",
+      "src": "https://github.com/stevearc/conform.nvim",
+      "version": "'v9.1.0'"
+    },
+    "cyberdream.nvim": {
+      "rev": "b9cc88378b776f33d3ea77164716f37c3f13ef72",
+      "src": "https://github.com/scottmckendry/cyberdream.nvim",
+      "version": "'v5.5.0'"
+    },
+    "flash.nvim": {
+      "rev": "ec0bf2842189f65f60fd40bf3557cac1029cc932",
+      "src": "https://github.com/folke/flash.nvim",
+      "version": "'v2.1.0'"
+    },
+    "gitsigns.nvim": {
+      "rev": "a462f416e2ce4744531c6256252dee99a7d34a83",
+      "src": "https://github.com/lewis6991/gitsigns.nvim",
+      "version": "'v2.1.0'"
+    },
+    "guts.nvim": {
+      "rev": "4377fdf450bca2bfd571191b6dc6ae8e24faff77",
+      "src": "https://github.com/vossenwout/guts.nvim",
+      "version": "'main'"
+    },
+    "mini.nvim": {
+      "rev": "928971c3cfe99ddf29659acc31214cfa836fabe4",
+      "src": "https://github.com/echasnovski/mini.nvim",
+      "version": "'v0.18.0'"
+    },
+    "nvim-lspconfig": {
+      "rev": "229b79051b380377664edc4cbd534930154921a1",
+      "src": "https://github.com/neovim/nvim-lspconfig",
+      "version": "'v2.10.0'"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "nvim-web-devicons": {
+      "rev": "dad71387de386a946b123079d0e53f23028f3abd",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons",
+      "version": "'master'"
+    },
+    "oil.nvim": {
+      "rev": "17c0a8faaf48298a0c0cfb0d757c0eaee4ff7a32",
+      "src": "https://github.com/stevearc/oil.nvim",
+      "version": "'v2.16.0'"
+    },
+    "snacks.nvim": {
+      "rev": "e6fd58c82f2f3fcddd3fe81703d47d6d48fc7b9f",
+      "src": "https://github.com/folke/snacks.nvim",
+      "version": "'v2.31.0'"
+    },
+    "todo-comments.nvim": {
+      "rev": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668",
+      "src": "https://github.com/folke/todo-comments.nvim",
+      "version": "'v1.5.0'"
+    },
+    "trouble.nvim": {
+      "rev": "748ca2789044607f19786b1d837044544c55e80a",
+      "src": "https://github.com/folke/trouble.nvim",
+      "version": "'v3.7.1'"
+    }
+  }
+}

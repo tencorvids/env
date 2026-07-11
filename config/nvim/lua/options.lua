@@ -2,7 +2,7 @@
 vim.env.PATH = "/etc/profiles/per-user/rew/bin:" .. vim.env.PATH
 
 -- Set <SPACE> as the leader key
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+-- Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -62,18 +62,9 @@ vim.opt.fillchars = { eob = " " }
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight when yanking (copying) text",
-    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
-
--- Remove background
-vim.cmd([[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]])
-
