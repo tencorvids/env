@@ -1,10 +1,12 @@
+local langs = {
+    "bash",
+    "c",
+    "go",
+    "lua"
+}
+
 require("nvim-treesitter").setup({
-    ensure_installed = {
-        "bash",
-        "c",
-        "go",
-        "lua"
-    },
+    ensure_installed = langs,
     sync_install = false,
 
     highlight = true,
