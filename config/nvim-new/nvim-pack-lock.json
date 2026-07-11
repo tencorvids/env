@@ -1,0 +1,39 @@
+{
+  "plugins": {
+    "cyberdream.nvim": {
+      "rev": "b9cc88378b776f33d3ea77164716f37c3f13ef72",
+      "src": "https://github.com/scottmckendry/cyberdream.nvim",
+      "version": "'v5.5.0'"
+    },
+    "flash.nvim": {
+      "rev": "ec0bf2842189f65f60fd40bf3557cac1029cc932",
+      "src": "https://github.com/folke/flash.nvim",
+      "version": "'v2.1.0'"
+    },
+    "mini.nvim": {
+      "rev": "928971c3cfe99ddf29659acc31214cfa836fabe4",
+      "src": "https://github.com/echasnovski/mini.nvim",
+      "version": "'v0.18.0'"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "nvim-web-devicons": {
+      "rev": "dad71387de386a946b123079d0e53f23028f3abd",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons",
+      "version": "'master'"
+    },
+    "oil.nvim": {
+      "rev": "17c0a8faaf48298a0c0cfb0d757c0eaee4ff7a32",
+      "src": "https://github.com/stevearc/oil.nvim",
+      "version": "'v2.16.0'"
+    },
+    "snacks.nvim": {
+      "rev": "e6fd58c82f2f3fcddd3fe81703d47d6d48fc7b9f",
+      "src": "https://github.com/folke/snacks.nvim",
+      "version": "'v2.31.0'"
+    }
+  }
+}
