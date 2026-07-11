@@ -1,55 +1,27 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-    if vim.v.shell_error ~= 0 then
-        vim.api.nvim_echo({
-            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out,                            "WarningMsg" },
-            { "\nPress any key to exit..." },
-        }, true, {})
-        vim.fn.getchar()
-        os.exit(1)
-    end
-end
-vim.opt.rtp:prepend(lazypath)
-
 require("options")
 require("keymaps")
-require("lazy").setup("plugins")
 
--- Function to find Godot project root directory
-local function find_godot_project_root()
-    local cwd = vim.fn.getcwd()
-    local search_paths = { '', '/..' }
+-- General
+vim.pack.add({
+	{ src = "https://github.com/ficd0/ashen.nvim", version = "main" },
+	{ src = "https://github.com/stevearc/oil.nvim", version = "v2.16.0" },
+	{ src = "https://github.com/folke/snacks.nvim", version = "v2.31.0" },
+	{ src = "https://github.com/folke/flash.nvim", version = "v2.1.0" },
+	{ src = "https://github.com/folke/trouble.nvim", version = "v3.7.1" },
+	{ src = "https://github.com/folke/todo-comments.nvim", version = "v1.5.0" },
+	{ src = "https://github.com/echasnovski/mini.nvim", version = "v0.18.0" },
+	{ src = "https://github.com/lewis6991/gitsigns.nvim", version = "v2.1.0" },
+})
 
-    for _, relative_path in ipairs(search_paths) do
-        local project_file = cwd .. relative_path .. '/project.godot'
-        if vim.uv.fs_stat(project_file) then
-            return cwd .. relative_path
-        end
-    end
+-- LSP & Co.
+vim.pack.add({
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+	{ src = "https://github.com/neovim/nvim-lspconfig", version = "v2.10.0" },
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
+	{ src = "https://github.com/stevearc/conform.nvim", version = "v9.1.0" },
+})
 
-    return nil
-end
-
--- Function to check if server is already running
-local function is_server_running(project_path)
-    local server_pipe = project_path .. '/server.pipe'
-    return vim.uv.fs_stat(server_pipe) ~= nil
-end
-
--- Function to start Godot server if needed
-local function start_godot_server_if_needed()
-    local godot_project_path = find_godot_project_root()
-
-    if godot_project_path and not is_server_running(godot_project_path) then
-        vim.fn.serverstart(godot_project_path .. '/server.pipe')
-        return true
-    end
-
-    return false
-end
-
--- Main execution
-start_godot_server_if_needed()
+-- Dependencies
+vim.pack.add({
+	{ src = "https://github.com/nvim-tree/nvim-web-devicons", version = "master" },
+})
