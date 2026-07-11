@@ -4,6 +4,9 @@ local servers = {
 	"clangd",
 	"gopls",
 	"lua_ls",
+    "emmet_language_server",
+    "ts_ls",
+    "tailwindcss"
 }
 
 for _, server in pairs(servers) do
