@@ -1,3 +1,4 @@
+-- stylua: ignore start
 require("snacks").setup({
 	explorer = { enabled = true, replace_netrw = true },
 	image = { enabled = true },
@@ -7,7 +8,6 @@ require("snacks").setup({
 	picker = { enabled = true },
 })
 
--- stylua: ignore start
 -- Pickers
 vim.keymap.set("n", "<LEADER><SPACE>", function() Snacks.picker.smart() end, { desc = "Smart find files" })
 vim.keymap.set("n", "<LEADER>e", function() Snacks.explorer() end, { desc = "File explorer" })
