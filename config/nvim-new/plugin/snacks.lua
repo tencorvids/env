@@ -8,7 +8,6 @@ require("snacks").setup({
 })
 
 -- stylua: ignore start
-
 -- Pickers
 vim.keymap.set("n", "<LEADER><SPACE>", function() Snacks.picker.smart() end, { desc = "Smart find files" })
 vim.keymap.set("n", "<LEADER>e", function() Snacks.picker.explorer() end, { desc = "File explorer" })
@@ -30,5 +29,4 @@ vim.keymap.set("n", "<LEADER>fb", function() Snacks.picker.buffers() end, { desc
 vim.keymap.set("n", "<LEADER>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 vim.keymap.set("n", "<LEADER>gb", function() Snacks.picker.git_branches() end, { desc = "Git branches" })
 vim.keymap.set("n", "<LEADER>gl", function() Snacks.picker.git_log() end, { desc = "Git log" })
-
 -- stylua: ignore end

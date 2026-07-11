@@ -9,6 +9,11 @@ for _, server in pairs(servers) do
 	vim.lsp.enable(server)
 end
 
+-- stylua: ignore start
+vim.keymap.set("n", "<LEADER>rn", function() vim.lsp.buf.rename() end, { desc = "LSP rename" })
+vim.keymap.set("n", "<LEADER>ca", function() vim.lsp.buf.code_action() end, { desc = "LSP code action" })
+-- stylua: ignore end
+
 -- Treesitter
 local langs = {
 	"bash",
