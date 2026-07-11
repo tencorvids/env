@@ -1,5 +1,11 @@
 -- Theme
 vim.cmd.colorscheme("ashen")
+vim.cmd([[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]])
 
 -- Setup
 require("gitsigns").setup({})
