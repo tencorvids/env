@@ -26,4 +26,9 @@ require("nvim-treesitter").setup({
 })
 
 -- Blink
-require("blink.cmp").setup({})
+require("blink.cmp").setup({
+    keymap = { preset = "default" },
+    sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+    },
+})
