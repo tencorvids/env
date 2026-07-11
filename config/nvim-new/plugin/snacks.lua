@@ -20,6 +20,7 @@ vim.keymap.set("n", "<LEADER>sm", function() Snacks.picker.man() end, { desc = "
 vim.keymap.set("n", "<LEADER>sh", function() Snacks.picker.help() end, { desc = "Search help" })
 vim.keymap.set("n", "<LEADER>sk", function() Snacks.picker.keymaps() end, { desc = "Search keymaps" })
 vim.keymap.set("n", "<LEADER>si", function() Snacks.picker.icons() end, { desc = "Search icons" })
+vim.keymap.set("n", "<LEADER>st", function() Snacks.picker.todo_comments() end, { desc = "Search todo comments" })
 
 -- Find
 vim.keymap.set("n", "<LEADER>ff", function() Snacks.picker.files() end, { desc = "Find files" })

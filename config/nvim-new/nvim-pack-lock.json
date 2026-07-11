@@ -64,6 +64,16 @@
       "rev": "e6fd58c82f2f3fcddd3fe81703d47d6d48fc7b9f",
       "src": "https://github.com/folke/snacks.nvim",
       "version": "'v2.31.0'"
+    },
+    "todo-comments.nvim": {
+      "rev": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668",
+      "src": "https://github.com/folke/todo-comments.nvim",
+      "version": "'v1.5.0'"
+    },
+    "trouble.nvim": {
+      "rev": "748ca2789044607f19786b1d837044544c55e80a",
+      "src": "https://github.com/folke/trouble.nvim",
+      "version": "'v3.7.1'"
     }
   }
 }
