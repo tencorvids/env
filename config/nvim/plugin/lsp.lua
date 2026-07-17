@@ -6,7 +6,9 @@ local servers = {
 	"lua_ls",
     "emmet_language_server",
     "ts_ls",
-    "tailwindcss"
+    "tailwindcss",
+    "oxfmt",
+    "oxlint"
 }
 
 for _, server in pairs(servers) do
@@ -44,6 +46,11 @@ require("blink.cmp").setup({
 local formatters = {
 	lua = { "stylua" },
 	go = { "gofmt" },
+    javascript = { "oxfmt" },
+    javascriptreact = { "oxfmt" },
+    typescript = { "oxfmt" },
+    typescriptreact = { "oxfmt" },
+    json = { "oxfmt" },
 }
 
 require("conform").setup({
