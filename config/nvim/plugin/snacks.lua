@@ -5,7 +5,12 @@ require("snacks").setup({
 	indent = { enabled = true },
 	input = { enabled = true },
 	lazygit = { enabled = true },
-	picker = { enabled = true },
+	picker = {
+        enabled = true,
+        exclude = {
+            "node_modules"
+        }
+    },
 })
 
 -- Pickers
