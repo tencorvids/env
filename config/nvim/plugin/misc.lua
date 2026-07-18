@@ -1,16 +1,21 @@
 -- stylua: ignore start
--- Theme
-vim.cmd.colorscheme("ashen")
-vim.cmd([[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]])
-
 -- Setup
 require("gitsigns").setup({})
 require("todo-comments").setup({})
+
+-- Theme
+vim.cmd.colorscheme("vesper")
+vim.cmd([[
+  highlight Normal guibg=none
+  highlight NormalNC guibg=none
+  highlight NormalFloat guibg=none
+  highlight NonText guibg=none
+
+  highlight Normal ctermbg=none
+  highlight NormalNC ctermbg=none
+  highlight NormalFloat ctermbg=none
+  highlight NonText ctermbg=none
+]])
 
 -- Oil
 require("oil").setup({

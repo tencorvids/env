@@ -25,6 +25,11 @@
       "src": "https://github.com/folke/flash.nvim",
       "version": "'v2.1.0'"
     },
+    "github-nvim-theme": {
+      "rev": "8db454eb272eabb349209ec62ceb63b8eea5f011",
+      "src": "https://github.com/projekt0n/github-nvim-theme",
+      "version": "'v1.1.2'"
+    },
     "gitsigns.nvim": {
       "rev": "a462f416e2ce4744531c6256252dee99a7d34a83",
       "src": "https://github.com/lewis6991/gitsigns.nvim",
@@ -34,6 +39,11 @@
       "rev": "4377fdf450bca2bfd571191b6dc6ae8e24faff77",
       "src": "https://github.com/vossenwout/guts.nvim",
       "version": "'main'"
+    },
+    "kanagawa.nvim": {
+      "rev": "bb85e4bfc8d89b0e62c8fa53ccdd13d12e2f77b3",
+      "src": "https://github.com/rebelot/kanagawa.nvim",
+      "version": "'master'"
     },
     "mini.nvim": {
       "rev": "928971c3cfe99ddf29659acc31214cfa836fabe4",
@@ -60,6 +70,11 @@
       "src": "https://github.com/stevearc/oil.nvim",
       "version": "'v2.16.0'"
     },
+    "oxocarbon.nvim": {
+      "rev": "cf49e389c22dab56224e43ae16422ddcd5b61b28",
+      "src": "https://github.com/nyoom-engineering/oxocarbon.nvim",
+      "version": "'main'"
+    },
     "snacks.nvim": {
       "rev": "e6fd58c82f2f3fcddd3fe81703d47d6d48fc7b9f",
       "src": "https://github.com/folke/snacks.nvim",
@@ -74,6 +89,11 @@
       "rev": "748ca2789044607f19786b1d837044544c55e80a",
       "src": "https://github.com/folke/trouble.nvim",
       "version": "'v3.7.1'"
+    },
+    "vesper.nvim": {
+      "rev": "1717b1ad657c94bec3fc2bdebb0c55452d9fe46d",
+      "src": "https://github.com/datsfilipe/vesper.nvim",
+      "version": "'main'"
     }
   }
 }

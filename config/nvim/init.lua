@@ -3,7 +3,8 @@ require("keymaps")
 
 -- General
 vim.pack.add({
-	{ src = "https://github.com/ficd0/ashen.nvim", version = "main" },
+	-- { src = "https://github.com/ficd0/ashen.nvim", version = "main" },
+	{ src = "https://github.com/datsfilipe/vesper.nvim", version = "main" },
 	{ src = "https://github.com/stevearc/oil.nvim", version = "v2.16.0" },
 	{ src = "https://github.com/folke/snacks.nvim", version = "v2.31.0" },
 	{ src = "https://github.com/folke/flash.nvim", version = "v2.1.0" },
