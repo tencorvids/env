@@ -30,7 +30,28 @@ vim.keymap.set("n", "<LEADER>;", "<CMD>Oil<CR>", { desc = "Trigger oil" })
 require("flash").setup({})
 vim.keymap.set({"n", "x", "o"}, "s", function() require("flash").jump() end, { desc = "Flash" })
 
--- Trouble
-require("trouble").setup({})
-vim.keymap.set("n", "<LEADER>x", "<CMD>Trouble diagnostics toggle<CR>", { desc = "Toggle trouble list" })
+-- Quicker
+require("quicker").setup({})
+vim.keymap.set("n", "<LEADER>x", function()
+	vim.diagnostic.setqflist({
+		severity = { min = vim.diagnostic.severity.WARN },
+		open = false,
+	})
+	require("quicker").toggle({
+		focus = true,
+		max_height = 16,
+	})
+end, { desc = "Toggle warnings/errors quickfix" })
+
+vim.keymap.set("n", "<LEADER>q", function()
+	vim.diagnostic.setloclist({
+		severity = { min = vim.diagnostic.severity.WARN },
+		open = false,
+	})
+	require("quicker").toggle({
+		loclist = true,
+		focus = true,
+		max_height = 16,
+	})
+end, { desc = "Toggle warnings/errors loclist" })
 -- stylua: ignore end

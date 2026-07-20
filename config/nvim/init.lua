@@ -8,10 +8,10 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim", version = "v2.16.0" },
 	{ src = "https://github.com/folke/snacks.nvim", version = "v2.31.0" },
 	{ src = "https://github.com/folke/flash.nvim", version = "v2.1.0" },
-	{ src = "https://github.com/folke/trouble.nvim", version = "v3.7.1" },
 	{ src = "https://github.com/folke/todo-comments.nvim", version = "v1.5.0" },
 	{ src = "https://github.com/echasnovski/mini.nvim", version = "v0.18.0" },
 	{ src = "https://github.com/lewis6991/gitsigns.nvim", version = "v2.1.0" },
+	{ src = "https://github.com/stevearc/quicker.nvim", version = "v1.5.1" },
 })
 
 -- LSP & Co.
