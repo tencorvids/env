@@ -4,3 +4,4 @@ set -g prefix C-a
 set -g mouse on
 bind x kill-pane
 set-option -g default-shell /bin/zsh
+set -g status-left-length 20
