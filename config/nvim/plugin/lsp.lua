@@ -5,7 +5,8 @@ local servers = {
 	"gopls",
 	"lua_ls",
     "emmet_language_server",
-    "ts_ls",
+    "sourcekit",
+    "tsc",
     "tailwindcss",
     "oxfmt",
     "oxlint"
@@ -50,6 +51,7 @@ local formatters = {
     javascriptreact = { "oxfmt" },
     typescript = { "oxfmt" },
     typescriptreact = { "oxfmt" },
+    css = { "oxfmt" },
     json = { "oxfmt" },
 }
 

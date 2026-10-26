@@ -17,7 +17,7 @@ vim.pack.add({
 -- LSP & Co.
 vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
-	{ src = "https://github.com/neovim/nvim-lspconfig", version = "v2.10.0" },
+	{ src = "https://github.com/neovim/nvim-lspconfig", version = "v2.12.0" },
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
 	{ src = "https://github.com/stevearc/conform.nvim", version = "v9.1.0" },
 })
