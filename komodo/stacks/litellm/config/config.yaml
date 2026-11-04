@@ -1,21 +1,3 @@
-model_list:
-  # Go subscription: everyday coding, with results checked by tests/review.
-  # Clients must send a stable x-litellm-session-id per conversation;
-  # the native Go provider forwards it as x-opencode-session.
-  - model_name: coding-cheap
-    litellm_params:
-      model: opencode_go/deepseek-v4.1-flash
-      api_key: os.environ/OPENCODE_GO_API_KEY
-      extra_headers:
-        User-Agent: env-coding-gateway/1.0
-
-  - model_name: coding-powerful
-    litellm_params:
-      model: opencode_go/gemini-4-argon
-      api_key: os.environ/OPENCODE_GO_API_KEY
-      extra_headers:
-        User-Agent: env-coding-gateway/1.0
-
 general_settings:
   disable_env_credential_login: true
   master_key: os.environ/LITELLM_MASTER_KEY
