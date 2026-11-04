@@ -1,5 +1,22 @@
 -- stylua: ignore start
 -- LSP Config
+
+-- Use Espressif clangd and discover system headers from the ESP cross-compilers.
+vim.lsp.config("clangd", {
+    cmd = {
+        vim.fn.expand("~/.espressif/tools/esp-clang/esp-19.1.2_20250312/esp-clang/bin/clangd"),
+        "--query-driver=" .. table.concat({
+            vim.fn.expand("~/.espressif") .. "/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-*",
+            vim.fn.expand("~/.espressif") .. "/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp*-elf-*",
+        }, ","),
+    },
+})
+
+-- Leave C/C++ to clangd so SourceKit does not emit host-toolchain diagnostics.
+vim.lsp.config("sourcekit", {
+    filetypes = { "swift", "objc", "objcpp" },
+})
+
 local servers = {
 	"clangd",
 	"gopls",
