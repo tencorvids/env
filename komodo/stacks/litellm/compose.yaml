@@ -12,9 +12,36 @@ services:
       - OPENAI_API_KEY=${OPENWEBUI_LITELLM_API_KEY:?required}
       - ENABLE_OLLAMA_API=false
       - WEBUI_SECRET_KEY=${OPENWEBUI_SECRET_KEY:?required}
+      - ENABLE_WEB_SEARCH=true
+      - WEB_SEARCH_ENGINE=searxng
+      - SEARXNG_QUERY_URL=http://searxng:8080/search
+      - WEB_SEARCH_RESULT_COUNT=${OPENWEBUI_WEB_SEARCH_RESULT_COUNT:-3}
+      - WEB_SEARCH_CONCURRENT_REQUESTS=${OPENWEBUI_WEB_SEARCH_CONCURRENT_REQUESTS:-2}
       - TZ=${TZ}
     depends_on:
       - litellm
+
+  searxng:
+    image: ${SEARXNG_IMAGE:-docker.io/searxng/searxng:2026.11.2-cccbc9e15@sha256:892ed5710603e38f9dc201e6a0b2f3f14dbdb8108edcadac30e55b165c979fb7}
+    container_name: searxng
+    restart: unless-stopped
+    volumes:
+      - ${SEARXNG_CONFIG_PATH:-./config/searxng/settings.yml}:/etc/searxng/settings.yml:ro
+      - ${SEARXNG_DATA_PATH}:/var/cache/searxng
+    environment:
+      - SEARXNG_SECRET=${SEARXNG_SECRET:?required}
+      - SEARXNG_BASE_URL=http://searxng:8080/
+      - TZ=${TZ}
+    healthcheck:
+      test:
+        - CMD
+        - /usr/local/searxng/.venv/bin/python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=3).read()"
+      interval: 10s
+      timeout: 5s
+      start_period: 20s
+      retries: 5
 
   litellm:
     image: ${LITELLM_IMAGE:-ghcr.io/berriai/litellm:v1.109.0-dev.2}
