@@ -19,6 +19,7 @@ services:
       - "8989:8989/tcp" # sonarr
       - "6868:6868/tcp" # profilarr
       - "5055:5055/tcp" # seerr
+      - "6246:6246/tcp" # maintainerr
     volumes:
       - ${TORRENT_GLUETUN_CONFIG_PATH}:/gluetun
     env_file:
@@ -172,6 +173,19 @@ services:
       timeout: 3s
       interval: 15s
       retries: 3
+
+  maintainerr:
+    image: ghcr.io/maintainerr/maintainerr:latest
+    container_name: maintainerr
+    user: "${PUID}:${PGID}"
+    restart: unless-stopped
+    network_mode: "service:gluetun"
+    depends_on:
+      - gluetun
+    volumes:
+      - ${TORRENT_MAINTAINERR_CONFIG_PATH}:/opt/data
+    environment:
+      - TZ=${TZ}
 
   jellyfin:
     image: jellyfin/jellyfin:latest
