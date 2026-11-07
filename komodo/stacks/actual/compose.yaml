@@ -1,0 +1,19 @@
+services:
+  actual:
+    image: ${ACTUAL_IMAGE:-actualbudget/actual-server:latest}
+    container_name: actual
+    restart: unless-stopped
+    ports:
+      - "${ACTUAL_PORT}:5006"
+    volumes:
+      - ${ACTUAL_DATA_PATH}:/data
+    env_file:
+      - .env
+    environment:
+      - TZ=${TZ}
+    healthcheck:
+      test: ["CMD", "node", "scripts/health-check.js"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
